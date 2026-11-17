@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Wintosh">
+    <title>Wintosh</title>
+    <link rel="icon" type="image/png" href="wintosh-logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="kepala">
+        <div class="wadah kepala-isi">
+            <a href="#/" class="logo" aria-label="Wintosh, ke halaman katalog">
+                <img src="wintosh-logo.jpeg" width="44" height="44" alt="">
+                <span class="logo-nama">WINTOSH</span>
+            </a>
+
+            <form class="cari" id="form-cari" role="search">
+                <label class="hanya-pembaca-layar" for="input-cari">Cari menu</label>
+                <input type="search" id="input-cari" autocomplete="off">
+                <button type="submit" class="tombol-cari">
+                 
+                    <span>🔍 Cari</span>
+                </button>
+            </form>
+
+            <nav class="navigasi" aria-label="Navigasi utama">
+                <a href="#/keranjang" data-nav="keranjang" class="nav-keranjang">
+                   
+                    <span>🛒 Keranjang</span>
+                    <span class="lencana" id="lencana-keranjang">0</span>
+                </a>
+                <a href="#/login" data-nav="login" id="nav-masuk">Masuk</a>
+                <button type="button" id="tombol-keluar">Keluar</button>
+            </nav>
+        </div>
+    </header>
+<!-- ==== ISI HALAMAN ==== -->
+    <main class="wadah">
+        <section id="halaman-katalog">
+            <h1 class="hanya-pembaca-layar">Katalog Wintosh</h1>
+            <div class="tata-katalog">
+                <aside class="sisi" aria-label="Kategori menu">
+                    <h2 class="sisi-judul">
+                        <img src="titik_horizontal-removebg-preview.png" alt="" width="16" height="16">
+                        Kategori menu
+                    </h2>
+                    <div class="kategori">
+                        <label class="sisi-item"><input type="radio" name="kategori" value="semua" checked><span>Semua Menu</span></label>
+                        <label class="sisi-item"><input type="radio" name="kategori" value="Signature drink"><span>Signature drink</span></label>
+                        <label class="sisi-item"><input type="radio" name="kategori" value="Fresh mocktail"><span>Fresh mocktail</span></label>
+                         <label class="sisi-item"><input type="radio" name="kategori" value="Carbohidrat"><span>Carbohidrat</span></label>
+                          <label class="sisi-item"><input type="radio" name="kategori" value="Dessert"><span>Dessert</span></label>
+                    </div>
+                </aside>
+                <!-- Fitur daftar kartu menu -->
+                <div class="hasil">
+                    <div class="grid-produk" id="grid-produk">
+
+                        <!-- Menu 1 -->
+                        <article class="kartu" data-id="1" data-nama="Coyowiny" data-kategori="Signature drink" data-harga="20000" data-deskripsi="Aroma cappucinno">
+                            <a class="kartu-tautan" href="#/detail/1">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="coyowiny.jfif" alt="">
+                                        <strong class="kartu-label label-foto">Coyowiny</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">coyowiny</h2>
+                                    <p class="kartu-catatan">Fresh milk, Palm sugar, Espresso, Cream</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp 20.000</p>
+                            </div>
+                        </article>
+                        
+                        <!-- Menu 2 -->
+
+                        <article class="kartu" data-id="2" data-nama="Karmelito" data-kategori="Signature drink" data-harga="25000" data-deskripsi="Aroma karamel">
+                            <a class="kartu-tautan" href="#/detail/2">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="karmelito.jfif" alt="">
+                                        <strong class="kartu-label label-foto">Karmelito</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">karmelito</h2>
+                                    <p class="kartu-catatan">Espresso, Fresh milk, Cream, Caramel</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp 25.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Menu 3 -->
+
+                        <article class="kartu" data-id="3" data-nama="Apocalipso" data-kategori="Fresh mocktail" data-harga="26000" data-deskripsi="Aroma blackcurrant">
+                            <a class="kartu-tautan" href="#/detail/3">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="apocalipso.jfif" alt="">
+                                        <strong class="kartu-label label-foto">Apocalipso</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">apocalipso</h2>
+                                    <p class="kartu-catatan">Blackcurrant, Soda, Lime</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp 26.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Menu 4 -->
+
+                        <article class="kartu" data-id="4" data-nama="Codiac montja" data-kategori="Fresh mocktail" data-harga="26000" data-deskripsi="bisa request sesuai pesanan anda suka suka hati.">
+                            <a class="kartu-tautan" href="#/detail/4">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="codiac montja.jfif" alt="">
+                                        <strong class="kartu-label label-foto">Codiac montja</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">codiac montja</h2>
+                                    <p class="kartu-catatan">Coconut water, Rose, Peach, Strawberry</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp 26.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Menu 5 -->
+
+                        <article class="kartu" data-id="5" data-nama="Nasagore ansjovis" data-kategori="Carbohidrat" data-harga="25000" data-deskripsi="Nasi goreng rasa nusantara bernuansa eropa">
+                            <a class="kartu-tautan" href="#/detail/5">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="nasagore ansjovis.jfif" alt="">
+                                        <strong class="kartu-label label-foto">Nasagore ansjovis</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">nasagore ansjovis</h2>
+                                    <p class="kartu-catatan">Fried rice, Scramble Egg, Medan's anchovy, Magic spice</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp 25.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Menu 6 -->
+
+                        <article class="kartu" data-id="6" data-nama="Pamka noya beef" data-kategori="Carbohidrat" data-harga="30000" data-deskripsi="Makanan eropa disajikan dengan rasa nusantara">
+                            <a class="kartu-tautan" href="#/detail/6">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="pamka noya beef.jfif" alt="">
+                                        <strong class="kartu-label label-foto">Pamka noya beef</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">pamka noya beef</h2>
+                                    <p class="kartu-catatan">Steam rice, Beef, Sunny Side Up Egg</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp 30.000</p>
+                            </div>
+                        </article>
+
+                         <!-- Menu 7 -->
+
+                        <article class="kartu" data-id="7" data-nama="Cassava cheese" data-kategori="Dessert" data-harga="22000" data-deskripsi="Singkong goreng super crispy">
+                            <a class="kartu-tautan" href="#/detail/7">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="cassava cheese.jfif" alt="">
+                                        <strong class="kartu-label label-foto">Cassava cheese</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">cassava cheese</h2>
+                                    <p class="kartu-catatan">Cassava, Cheese, Swentener</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp 22.000</p>
+                            </div>
+                        </article>
+
+                         <!-- Menu 8 -->
+
+                        <article class="kartu" data-id="8" data-nama="French fries" data-kategori="Dessert" data-harga="20000" data-deskripsi="Kentang goreng renyah dan super crispy">
+                            <a class="kartu-tautan" href="#/detail/8">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="french fries.jfif" alt="">
+                                        <strong class="kartu-label label-foto">French fries</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">french fries</h2>
+                                    <p class="kartu-catatan">Potato, Sauce, Garlic</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp 20.000</p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <p class="kosong" id="katalog-kosong">Menu tidak ditemukan. Coba kata lain atau pilih kategori lain.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TEMPLATE BARIS BARANG ===== --> 
+    <template id="templat-baris"> 
+        <article class="baris-keranjang"> 
+            <div class="baris-gambar"><img class="foto" src="" alt=""></div> 
+            <div class="baris-info"> 
+                <a href="#/"></a> 
+                <p></p> 
+            </div> 
+            <div class="baris-aksi"> 
+                <div class="pengatur-jumlah"> 
+                    <button type="button" data-aksi="kurang" aria-label="Kurangi jumlah">-</button> 
+                    <span class="jumlah"></span> 
+                    <button type="button" data-aksi="tambah" aria-label="Tambah jumlah">+</button> 
+                </div> 
+                <p class="baris-subtotal"></p> 
+                <button type="button" class="tombol-teks" data-aksi="hapus">Hapus</button> 
+            </div> 
+        </article> 
+    </template> 
+
+    <section id="halaman-login"> 
+            <div class="masuk"> 
+                <div class="masuk-visual"> 
+                    <img src="wintosh-logo.jpeg" alt=""> 
+                </div> 
+ 
+                <!-- Formulir masuk --> 
+                <form class="masuk-form" id="form-login"> 
+                    <!-- Logo dan judul login --> 
+                    <img class="masuk-logo" src="wintosh-logo.jpeg" alt="Wintosh" 
+                        width="72" height="72"> 
+                    <h1>Selamat datang</h1> 
+                    <p class="masuk-info">Masuk dengan akun anda.</p> 
+ 
+                    <div class="kolom-isian">  
+                        <label for="isian-username">Username</label> 
+                        <input type="text" id="isian-username" autocomplete="username" required> 
+                        <p class="pesan-galat">Username wajib diisi.</p> 
+                    </div> 
+ 
+                    <div class="kolom-isian" style="position: relative;">
+                        <label for="isian-password">Password</label>
+                        <div style="position: relative;">
+                            <input type="password" id="isian-password" autocomplete="current-password" required style="width: 100%; padding-right: 40px; box-sizing: border-box;">
+                            <!-- Tombol Show/Hide Password -->
+                            <button type="button" id="toggle-password" onclick="togglePasswordVisibility()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 16px;">🙉</button>
+                        </div>
+                        <p class="pesan-galat">Password wajib diisi.</p> 
+                        <p class="pesan-galat" id="login-salah" hidden>Username atau password salah.</p> 
+                    </div>
+
+                    <button type="submit" class="tombol tombol-utama tombol-lebar tombol-kirim">Masuk</button> 
+                    <a class="masuk-kembali" href="#/">Kembali ke katalog</a> 
+                </form> 
+            </div> 
+        </section> 
+ 
+        <!-- ===== DETAIL MENU ===== --> 
+        <section id="halaman-detail"> 
+            <!-- Kembali ke katalog --> 
+            <a class="tautan-kembali" href="#/">Kembali ke katalog</a> 
+            <p class="kosong" id="detail-tidak-ada" hidden>Menu tidak ditemukan.</p> 
+ 
+            <article class="detail" id="isi-detail"> 
+                <!-- Foto menu --> 
+                <div class="detail-gambar"> 
+                    <img class="foto" id="detail-gambar" src="" alt=""> 
+                </div> 
+ 
+                <div class="detail-info"> 
+                    <!-- Nama dan deskripsi menu --> 
+                    <h1 id="detail-nama"></h1> 
+                    <p class="detail-deskripsi" id="detail-deskripsi"></p>
+
+                    <!-- Kasir --> 
+                    <div class="kasir" role="group" aria-label="Rincian pesanan"> 
+                        <div class="kasir-judul"> 
+                            <span>Item</span> 
+                            <span>Jumlah</span> 
+                            <span>Subtotal</span>
+                             </div> 
+                        <div class="kasir-baris"> 
+                            <div class="kasir-info"> 
+                                <span class="kasir-nama" id="kasir-nama"></span> 
+                                <span class="kasir-harga" id="kasir-harga"></span> 
+                            </div> 
+                            <div class="kasir-jumlah"> 
+                                <button type="button" id="tombol-kurang" aria-label="Kurangi jumlah">-</button> 
+                                <label class="hanya-pembaca-layar" for="isian-jumlah">Jumlah</label> 
+                                <input type="number" id="isian-jumlah" min="1" value="1"> 
+                                <button type="button" id="tombol-tambah" aria-label="Tambah jumlah">+</button> 
+                            </div> 
+                            <span class="kasir-subtotal total-teks"></span> 
+                        </div> 
+                        <div class="kasir-total"> 
+                            <span>Total bayar</span> 
+                            <strong class="total-teks"></strong> 
+                        </div> 
+                    </div> 
+ 
+                    <!-- Pesan ke keranjang dan pesan sekarang --> 
+                    <div class="detail-aksi"> 
+                        <button type="button" class="tombol-keranjang" id="tombol-keranjang">Tambah ke 
+                            keranjang</button> 
+                        <button type="button" class="tombol-pesan" id="tombol-pesan"> 
+                            <span class="total-teks"></span> 
+                            <span>Pesan sekarang</span> 
+                        </button> 
+                    </div> 
+                </div> 
+            </article> 
+        </section>
+
+<!-- ==== KERANJANG ==== -->       
+        <section id="halaman-keranjang"> 
+            <h1 class="judul-halaman">Keranjang</h1> 
+ 
+            <!-- Fitur keranjang kosong --> 
+            <div class="kosong" id="keranjang-kosong"> 
+                <p>Keranjang masih kosong.</p> 
+                <a class="tombol tombol-utama" href="#/">Belanja sekarang</a> 
+            </div> 
+ 
+            <div class="dua-kolom" id="keranjang-isi">  
+                <div class="daftar-keranjang" id="daftar-keranjang"></div> 
+                <aside class="struk struk-menempel" aria-label="Ringkasan keranjang"> 
+                    <h2>Ringkasan</h2> 
+                    <div class="struk-baris"><span>Jumlah pesanan</span><span id="keranjang-jumlah">0</span></div> 
+                    <div class="struk-baris struk-total"><span>Total harga</span><span 
+                            id="keranjang-subtotal">Rp0</span></div> 
+                    <div class="struk-aksi"> 
+                        <a class="tombol tombol-utama" href="#/checkout">Lanjutkan checkout</a> 
+                        <a class="tombol" href="#/">Lanjut belanja</a> 
+                    </div> 
+                </aside> 
+            </div> 
+        </section>
+
+         <section id="halaman-checkout">  
+            <a class="tautan-kembali" href="#/keranjang">Kembali ke keranjang</a> 
+            <h1 class="judul-halaman">Checkout</h1> 
+ 
+            <div class="dua-kolom"> 
+                <form id="form-checkout"> 
+ 
+                    <!-- Data pemesan --> 
+                    <section class="kotak" aria-labelledby="judul-data"> 
+                        <h2 class="kotak-judul" id="judul-data"><span class="kotak-nomor">1</span>Kontak pemesan</h2> 
+ 
+                        <div class="baris-isian"> 
+                            <div class="kolom-isian"> 
+                                <label for="isian-nama">Nama lengkap</label> 
+                                <input type="text" id="isian-nama" autocomplete="name" required 
+                                    pattern="[A-Za-z .'\-]{3,}"> 
+                                <p class="pesan-galat">Nama harus diisi.</p> 
+                            </div> 
+                            <div class="kolom-isian"> 
+                                <label for="isian-hp">Nomor HP</label> 
+                                <input type="tel" id="isian-hp" autocomplete="tel" required 
+                                    pattern="(\+62|62|0)8[0-9]{8,11}"> 
+                                <p class="pesan-galat">62+.</p> 
+                            </div> 
+                        </div> 
+                    </section>
+
+                     <section class="kotak" aria-labelledby="judul-kirim">
+                        <h2 class="kotak-judul" id="judul-kirim"><span class="kotak-nomor">2</span>Alamat pengiriman 
+                        </h2> 
+ 
+                        <div class="kolom-isian"> 
+                            <label for="isian-alamat">Alamat lengkap</label> 
+                            <textarea id="isian-alamat" rows="3" autocomplete="street-address" required 
+                                minlength="10"></textarea> 
+                            <p class="pesan-galat">Alamat wajib diisi lengkap.</p> 
+                        </div> 
+                        <div class="kolom-isian"> 
+                            <label for="isian-kota">Kecamatan / kota</label> 
+                            <input type="text" id="isian-kota" autocomplete="address-level2" required minlength="3"> 
+                            <p class="pesan-galat">Harus diisi.</p> 
+                        </div> 
+                    </section> 
+ 
+                    <!-- Pembayaran --> 
+                    <section class="kotak" aria-labelledby="judul-bayar"> 
+                        <h2 class="kotak-judul" id="judul-bayar"><span class="kotak-nomor">3</span>Pembayaran</h2> 
+ 
+                        <div class="kolom-isian"> 
+                            <label for="isian-pembayaran">Metode pembayaran</label> 
+                            <select id="isian-pembayaran" required> 
+                                <option value="">Pilih metode pembayaran</option> 
+                                <option value="Tunai di kedai">Tunai</option> 
+                                <option value="QRIS">QRIS</option> 
+                                <option value="Transfer bank">Transfer bank</option> 
+                            </select> 
+                            <p class="pesan-galat">Pilih metode pembayaran.</p> 
+                        </div>
+
+                         <div class="kolom-isian"> 
+                            <label for="isian-catatan">Catatan <span class="redup">(opsional)</span></label>
+                             <textarea id="isian-catatan" rows="2" maxlength="200"></textarea> 
+                        </div> 
+                    </section> 
+                </form> 
+ 
+                <!-- Ringkasan pesanan dan tombol buat pesanan --> 
+                <aside class="struk struk-menempel" aria-label="Ringkasan pesanan"> 
+                    <h2>Ringkasan pesanan</h2> 
+                    <div class="daftar-ringkas" id="ringkasan-checkout"></div> 
+                    <div class="struk-baris struk-total"><span>Total biaya</span><span id="checkout-total"></span></div> 
+                    <button type="submit" form="form-checkout" 
+                        class="tombol tombol-utama tombol-lebar tombol-kirim">Buat pesanan</button> 
+                </aside> 
+            </div> 
+        </section> 
+
+        <!-- ===== MENU KONFIRMASI PESANAN ===== --> 
+        <section id="halaman-sukses"> 
+            <!-- Fitur pesan pesanan tidak ditemukan --> 
+            <p class="kosong" id="sukses-tidak-ada" hidden> 
+                Pesanan tidak ditemukan. <a href="#/">Kembali ke katalog</a> 
+            </p> 
+ 
+            <div class="sukses" id="isi-sukses"> 
+                <!-- Fitur pesan pesanan berhasil dibuat --> 
+                  <img src="wintosh-logo.jpeg" width="74" height="74">
+                <div class="sukses-ikon" aria-hidden="true"><strong>WINTOSH</strong></div> 
+                <h1>Pesanan berhasil dibuat!</h1> 
+                <p id="sukses-pemesan"></p> 
+                <!-- Fitur rincian pesanan yang baru dibuat --> 
+                <div class="struk"> 
+                    <div class="daftar-ringkas" id="sukses-daftar"></div> 
+                    <div class="struk-baris struk-total"><span>Total bayar</span><span id="sukses-total"></span></div> 
+                </div> 
+                <!-- Fitur tombol pesan lagi --> 
+                <div class="sukses-tombol"> 
+                    <a class="tombol tombol-utama" href="#/">Pesan lagi</a> 
+                </div> 
+            </div> 
+        </section> 
+ 
+    </main> 
+
+
+        <footer class="kaki"> 
+        <div class="wadah"> 
+            <div class="kaki-kolom"> 
+                <!-- Fitur profil kedai --> 
+                <section> 
+                    <p class="kaki-logo"> 
+                        <img src="wintosh-logo.jpeg" alt="Logo wintosh" width="40" height="40"> 
+                        Wintosh 
+                    </p> 
+                    <p>Menyajikan makanan dan minuman dan tempat nyaman yang cocok untuk bersantai. Pesan dari mana saja, ambil di tempat tanpa antri.</p> 
+                </section> 
+ 
+                <!-- Fitur jam buka dan kontak --> 
+                <section> 
+                    <h2 class="kaki-judul">Jam buka &amp; kontak</h2> 
+                    <dl class="kaki-daftar"> 
+                        <div> 
+                            <p>Senin-Sabtu</p> 
+                            <p>10.00 - 22.00 WIB</p> 
+                        </div> 
+                        <div> 
+                            <p>Minggu</p> 
+                            <p>09.00 - 23.00 WIB</p> 
+                        </div> 
+                    </dl> 
+                    <p class="kaki-info">Pesan online atau langsung ke tempat</p> 
+                    <p class="kaki-info">Instagram: @Win.tosh</p>
+
+                </section>
+                
+                 <section> 
+                    <h2 class="kaki-judul">Metode pembayaran</h2> 
+                    <p class="kaki-info">Menerima pembayaran tunai &amp; digital:</p> 
+                    <ul class="kaki-bayar"> 
+                        <li>TUNAI</li> 
+                        <li>QRIS</li> 
+                        <li>TRANSFER</li> 
+                    </ul> 
+                </section> 
+            </div> 
+            <!-- Fitur hak cipta --> 
+            <p class="kaki-hakcipta">2026@Win.tosh</p> 
+        </div> 
+    </footer>
+
+    <script src="script.js"></script> 
+    
+</body>
+</html>
